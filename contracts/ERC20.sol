@@ -29,6 +29,15 @@ contract ERC20 {
         _;
     }
 
+    constructor() {
+        _name = "ERC20";
+        _symbol = "ERC";
+        _decimals = 18;
+        _totalSupply = 1000000 * 10 ** uint256(_decimals);
+        owner = msg.sender;
+        balances[owner] = _totalSupply;
+    }
+
     function name() public view returns (string memory) {
         return _name;
     }
