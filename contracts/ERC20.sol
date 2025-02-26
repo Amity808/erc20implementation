@@ -4,10 +4,10 @@ pragma solidity 0.8.28;
 
 contract ERC20 {
 
-    string _name;
-    string _symbol;
-    uint8 _decimals;
-    uint256 _totalSupply;
+    string private _name;
+    string private _symbol;
+    uint8 private _decimals;
+    uint256 private _totalSupply;
 
     address owner;
 
